@@ -12,7 +12,7 @@ function UserInput() {
     ...prevState,
     [name]: +value
   }));
-  console.log(name+" "+value);
+ 
   
 }
 
