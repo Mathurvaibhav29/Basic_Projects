@@ -1,21 +1,4 @@
-import React, { useState } from "react";
-
-function UserInput() {
- const[enteredValue,setEnteredValue]= useState({
-  Amount:15000,
-  Interest:8.2,
-  Duration:12
- })
- function handleChange(event) {
-  const { name, value } = event.target;
-  setEnteredValue(prevState => ({
-    ...prevState,
-    [name]: +value
-  }));
- 
-  
-}
-
+function UserInput({handleChange, enteredValue}) {
   return (
     <>
       <div className="">
