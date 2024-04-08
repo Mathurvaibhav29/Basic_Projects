@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import UserInput from './components/UserInput';
+import Calculation from './components/Calculation';
 
 function App() {
   const[enteredValue,setEnteredValue]= useState({
@@ -21,8 +22,9 @@ function App() {
 <>
 
 <div className="bg-cyan-700 min-h-screen">
-  <h1>Hello</h1>
+ 
   <UserInput handleChange={handleChange} enteredValue={enteredValue}/>
+  <Calculation  enteredValue={enteredValue}/>
   
 </div>
 </>
