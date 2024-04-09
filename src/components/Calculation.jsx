@@ -7,11 +7,19 @@ function Calculation({enteredValue}) {
   let durationYears=Duration/12;
   let receivedInterest=((Amount*Interest*durationYears)/100).toFixed(2)
   let receivedAmount=parseFloat(Amount)+parseFloat(receivedInterest)
-  console.log("Interest here is" + " "+receivedInterest+" "+"And received amount is" + " "+receivedAmount)
-  
   
   return (   
 <>
+<div>
+<label>
+    Interest Earned 
+    <input name="receivedInterest" type="number" value={receivedInterest}/>
+  </label>
+  <label>
+    Received Amount 
+    <input name="receivedAmount" type="number" value={receivedAmount}/>
+  </label>
+</div>
 
 </>
   )
