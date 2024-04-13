@@ -1,28 +1,31 @@
-import React from 'react'
-function Calculation({enteredValue}) {
+import React from "react";
+function Calculation({ enteredValue }) {
+  let Amount = enteredValue.Amount;
+  let Interest = enteredValue.Interest;
+  let Duration = enteredValue.Duration;
+  let durationYears = Duration / 12;
+  let receivedInterest = ((Amount * Interest * durationYears) / 100).toFixed(2);
+  let receivedAmount = parseFloat(Amount) + parseFloat(receivedInterest);
 
-  let Amount=enteredValue.Amount;
-  let Interest=enteredValue.Interest;
-  let Duration=enteredValue.Duration;
-  let durationYears=Duration/12;
-  let receivedInterest=((Amount*Interest*durationYears)/100).toFixed(2)
-  let receivedAmount=parseFloat(Amount)+parseFloat(receivedInterest)
-  
-  return (   
-<>
-<div>
-<label>
-    Interest Earned 
-    <input name="receivedInterest" type="number" value={receivedInterest}/>
-  </label>
-  <label>
-    Received Amount 
-    <input name="receivedAmount" type="number" value={receivedAmount}/>
-  </label>
-</div>
-
-</>
-  )
+  return (
+    <>
+      <div className="bg-gray-300 p-6 mt-2 text-xl text-cyan-600 ">
+        <label className="flex flex-col">
+          Interest Earned
+          <input
+          className="border-2 border-cyan-600 rounded-full"
+            name="receivedInterest"
+            type="number"
+            value={receivedInterest}
+          />
+        </label>
+        <label className="flex flex-col">
+          Received Amount
+          <input className="border-2 border-cyan-600 rounded-full" name="receivedAmount" type="number" value={receivedAmount} />
+        </label>
+      </div>
+    </>
+  );
 }
 
-export default Calculation
+export default Calculation;

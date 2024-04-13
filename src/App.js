@@ -21,7 +21,7 @@ function App() {
   return (
 <>
 
-<div className="bg-cyan-700 min-h-screen">
+<div className="bg-cyan-900 min-h-screen">
  
   <UserInput handleChange={handleChange} enteredValue={enteredValue}/>
   <Calculation  enteredValue={enteredValue}/>
