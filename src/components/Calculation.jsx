@@ -9,11 +9,11 @@ function Calculation({ enteredValue }) {
 
   return (
     <>
-      <div className="bg-gray-300 p-6 mt-2 text-xl text-cyan-600 ">
-        <label className="flex flex-col">
+      <div className="bg-gray-300 p-6 text-xl text-cyan-600 mt-8 border rounded-2xl">
+        <label className="flex flex-col  ">
           Interest Earned
           <input
-          className="border-2 border-cyan-600 rounded-full"
+            className="border-2 border-cyan-600 rounded-full"
             name="receivedInterest"
             type="number"
             value={receivedInterest}
@@ -21,7 +21,12 @@ function Calculation({ enteredValue }) {
         </label>
         <label className="flex flex-col">
           Received Amount
-          <input className="border-2 border-cyan-600 rounded-full" name="receivedAmount" type="number" value={receivedAmount} />
+          <input
+            className="border-2 border-cyan-600 rounded-full"
+            name="receivedAmount"
+            type="number"
+            value={receivedAmount}
+          />
         </label>
       </div>
     </>

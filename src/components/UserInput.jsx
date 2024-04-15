@@ -1,7 +1,7 @@
 function UserInput({ handleChange, enteredValue }) {
   return (
     <>
-      <div className="bg-cyan-600 p-6 text-xl text-white ">
+      <div className="bg-cyan-600 p-6 text-xl text-white mt-20 border rounded-2xl">
         <label className="flex flex-col">
           Amount (INR):
           <input
@@ -25,7 +25,7 @@ function UserInput({ handleChange, enteredValue }) {
         <label className="flex flex-col">
           Duration (in Months):
           <input
-            className="bg-cyan-600 border-2 rounded-full border-white"
+            className="bg-cyan-600 border-2 rounded-full border-white "
             name="Duration"
             type="number"
             value={enteredValue.Duration}
