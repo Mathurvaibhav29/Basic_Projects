@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import UserInput from "./components/UserInput";
 import Calculation from "./components/Calculation";
+const labelClass="flex flex-col";
 
 function App() {
   const [enteredValue, setEnteredValue] = useState({
@@ -18,10 +19,14 @@ function App() {
   }
   return (
     <>
-      <div className="bg-cyan-900 min-h-screen">
-        <div className=" grid justify-center items-center">
-          <UserInput handleChange={handleChange} enteredValue={enteredValue} />
-          <Calculation enteredValue={enteredValue} />
+      <div className="bg-cyan-900 min-h-screen flex justify-center items-center">
+        {/* Mobile-like box container */}
+        <div
+          className="bg-cyan-600 shadow-xl rounded-3xl overflow-hidden border border-black "
+          style={{ width: "285px", height: "500px" }}
+        >
+          <UserInput handleChange={handleChange} enteredValue={enteredValue} labelClass={labelClass}/>
+          <Calculation enteredValue={enteredValue} labelClass={labelClass} />
         </div>
       </div>
     </>
