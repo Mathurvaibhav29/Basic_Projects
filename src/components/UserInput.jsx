@@ -1,3 +1,5 @@
+import Buttons from "./Buttons";
+
 function UserInput({ handleChange, enteredValue,labelClass }) {
   const inputStyle="bg-cyan-600 border-2 rounded-full border-white"
   return (
@@ -34,6 +36,8 @@ function UserInput({ handleChange, enteredValue,labelClass }) {
           />
         </label>
       </div>
+      <Buttons/>
+      
     </>
   );
 }

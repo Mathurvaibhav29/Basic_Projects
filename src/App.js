@@ -23,11 +23,12 @@ function App() {
         {/* Mobile-like box container */}
         <div
           className="bg-cyan-600 shadow-xl rounded-3xl overflow-hidden border border-black "
-          style={{ width: "285px", height: "500px" }}
+          style={{ width: "285px", height: "550px" }}
         >
           <UserInput handleChange={handleChange} enteredValue={enteredValue} labelClass={labelClass}/>
           <Calculation enteredValue={enteredValue} labelClass={labelClass} />
         </div>
+        
       </div>
     </>
   );
