@@ -20,7 +20,7 @@ function App() {
   return (
     <>
       <div className="bg-cyan-900 min-h-screen flex justify-center items-center">
-        {/* Mobile-like box container */}
+       
         <div
           className="bg-cyan-600 shadow-xl rounded-3xl overflow-hidden border border-black "
           style={{ width: "285px", height: "550px" }}
