@@ -1,12 +1,16 @@
 import React from "react";
-function Calculation({ enteredValue ,labelClass}) {
+function Calculation({ enteredValue, labelClass }) {
   let Amount = enteredValue.Amount;
   let Interest = enteredValue.Interest;
   let Duration = enteredValue.Duration;
+
   let durationYears = Duration / 12;
-  let receivedInterest = ((Amount * Interest * durationYears) / 100).toFixed(2);
+  let receivedInterest = parseFloat(
+    ((Amount * Interest * durationYears) / 100).toFixed(2)
+  );
   let receivedAmount = parseFloat(Amount) + parseFloat(receivedInterest);
-  const inputStyle="border-2 border-cyan-600 rounded-full";
+
+  const inputStyle = "border-2 border-cyan-600 rounded-full";
   return (
     <>
       <div className="bg-gray-300 p-6 text-xl text-cyan-600 mt-8 border rounded-3xl">
@@ -17,6 +21,7 @@ function Calculation({ enteredValue ,labelClass}) {
             name="receivedInterest"
             type="number"
             value={receivedInterest}
+            readOnly
           />
         </label>
         <label className={labelClass}>
@@ -26,6 +31,7 @@ function Calculation({ enteredValue ,labelClass}) {
             name="receivedAmount"
             type="number"
             value={receivedAmount}
+            readOnly
           />
         </label>
       </div>
